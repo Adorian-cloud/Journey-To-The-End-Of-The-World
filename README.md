@@ -1,2 +1,4 @@
-# Jouney-to-the-end-of-the-word
+Journey to the End of the World
+
 A Little Game to Test the Infinity
+
