@@ -1,4 +1,4 @@
-Journey to the End of the World
+# Journey to the End of the World
 
-A Little Game to Test the Infinity
+A Little Clicker Game to Test the Infinity(is not Finish)
 
