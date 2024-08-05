@@ -1,0 +1,2289 @@
+<!-- Star of the Program 
+Adorian Present,
+-Journey to the End of the World-  
+-->
+<html>
+  <head>
+    <title>Journey to the End of the World</title>                                  
+    <link rel="stylesheet" type="text/css" href="mainstyle.css" />
+  </head>
+    <body id="Background-Body">
+      <div id="Borders">
+        <div id="Clock-Border">
+           <span id="TimeofLive">
+              You have <span id="Year">0</span> Years
+           </span>
+           <span id="TimeofLive-T">
+             <strong id="TitleTiL">Happy Birthday!</strong>
+             <span id="TiLInf"></span>
+             <p id="DescriptionTiL">
+               Maybe today is your birthday or maybe it's tomorrow?
+             </p>
+           </span>
+           <span id="Calendar">
+              Days:<span id="Day">0</span>
+              Months:<span id="Month">0</span>
+              Years:<span id="Year">0</span>
+           </span>
+        </div>
+        <div id="Status-Border">
+            <div id="PHP-Stat">
+                <div id="PHP">
+                  <span id="PHpT">PH</span>     
+                      <span id="PHpT-Tooltip">
+                        <strong id="PHealthI">Physical Health</strong>
+                        <br>
+                        -<strong id="PHealthTitle">Starving</strong>-
+                        <p>
+                        <span id="Description-PHealth">
+                          Your malnutrition finally hits you like truck, and you realize 
+                          that this can't continue, you need money...
+                        </span>
+                      </span>
+                </div>
+                <div id="PHp-TotalBar">
+                      <div id="PHpBar"></div>
+                      <div id="PHpStatusT">
+                          <span id="PHpBNormal">0.01</span>
+                          <span id="PHpBSe">/</span>
+                          <span id="PHpBTotal">1</span>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div id="Stats-Border">
+            <div id="Strength-Stat">
+                <div id="Strength">
+                      <span id="Strength-T">Str</span>     
+                      <span id="Strength-Tooltip">
+                          <strong id="Strength-Title">Strength</strong>
+                          <p>
+                          <span id="Description-Strength">
+
+                          </span>
+                      </span>
+                </div>
+                <div id="Strength-TotalBar">
+                      <div id="Strength-Bar"></div>
+                      <div id="Strength-StatusT">
+                          <span id="Strength-Stat-Number">0.3</span>
+                          <span id="Strength-Stat-Separator">/</span>
+                          <span id="Strength-Stat-Limit">?</span>
+                      </div>
+                </div>
+            </div>
+            <div id="Vitality-Stat">
+                <div id="Vitality">
+                      <span id="Vitality-T">Vit</span>     
+                      <span id="Vitality-Tooltip">
+                          <strong id="Vitality-Title">Vitality</strong>
+                          <p>
+                          <span id="Description-Vitality">
+
+                          </span>
+                      </span>
+                </div>
+                <div id="Vitality-TotalBar">
+                      <div id="Vitality-Bar"></div>
+                      <div id="Vitality-StatusT">
+                          <span id="Vitality-Stat-Number">0.5</span>
+                          <span id="Vitality-Stat-Separator">/</span>
+                          <span id="Vitality-Stat-Limit">?</span>
+                      </div>
+                </div>
+            </div>
+            <div id="Agility-Stat">
+                <div id="Agility">
+                      <span id="Agility-T">Agi</span>     
+                      <span id="Agility-Tooltip">
+                          <strong id="Agility-Title">Agility</strong>
+                          <p>
+                          <span id="Description-Agility">
+
+                          </span>
+                      </span>
+                </div>
+                <div id="Agility-TotalBar">
+                      <div id="Agility-Bar"></div>
+                      <div id="Agility-StatusT">
+                          <span id="Agility-Stat-Number">0.6</span>
+                          <span id="Agility-Stat-Separator">/</span>
+                          <span id="Agility-Stat-Limit">?</span>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div id="Location-Border">
+          <div id="Actual-Location">
+             <span id="Player-Location">Forest on the Outskirts of the City</span>
+             <span id="Location-Tooltip">
+               <strong id="LocationTitle">Dark Forest</strong>
+               <p>
+               <span id="Description-Location">
+                 A Hellish place where life and death are just one step away,
+                 where the trees darken the day, and the beast feast during the night... 
+               </span>
+             </span>
+          </div>
+        </div>
+        <div id="Table-Border">
+           <div id="Table-Tabs-List">
+               <button id="Action-Tab"onclick=tabs(1,1)>Actions</button>
+               <button id="Skills-Tab"onclick=tabs(2,1)>Skills</button>
+               <button id="Shop-Tab"onclick=tabs(3,1)>Shop</button>
+               <button id="House-Tab"onclick=tabs(4,1)>House</button>
+               <button id="Plans-Tab"onclick=tabs(5,1)>Plans</button>
+           </div>
+           <div id="Table-Border-List">
+              <div id="Action-Border"> 
+                <div id="ActionsList">
+                  <div id="Actions-Tier-0-Zones">
+                      <div id="Zone-Forest">
+                          <span id="Zone-Forest-Title">Forest</span>
+                          <div id="Stick-Action">
+                              <button id="Stick"onclick="actionStick(1)">Stick</button>   
+                              <span id="Stick-ToolTip">
+                                  <strong id="TitleSti">Get a Stick!</strong>
+                                  <span id="StickInf"></span>
+                                  <span id="StickDuTotal">
+                                      <span id="StickDuT">Durability:</span>
+                                      <span id="StickDu"></span>
+                                  </span>
+                                  <br>
+                                  <span id="StickPHLo">
+                                      <span id="StickPHT">PH:</span>
+                                      <span id="StickPH"></span>
+                                  </span>
+                                  <p>
+                                  <span id="DescriptionSti">
+                                      A primordial instinct to pick up a stick from the ground.
+                                  </span>
+                                  <br>
+                                  <span id="StickGet">
+                                      <span id="StickGetT">Stick:</span>
+                                      <span id="StickNumbGet">1</span>
+                                  </span>
+                              </span>  
+                          </div>
+                          <div id="Swing-Action">
+                              <button id="Swing" onclick="actionSwing(1)">Swing</button>
+                              <span id="Swing-ToolTip">
+                                  <strong id="TitleSwi">Swing the Stick!</strong>
+                                  <br>
+                                  <span id="SwingPHLo">
+                                      <span id="SwingPHT">PH:</span>
+                                      <span id="SwingPH">-0.01</span>
+                                      <br> 
+                                  </span>
+                                  <br>              
+                                  <span id="SwingInf"></span>
+                                  <span id="DescriptionSwi">
+                                      A little desire, to become stronger.
+                                  </span>
+                                  <br>
+                                  <span id="TSlotSW">
+                                      <span id="TSWD">Days:</span>
+                                      <span id="DSw">0.1</span>
+                                  </span>
+                                  <br>
+                                  <span id="SwSExp">
+                                      <span id="TSwE">Exp:</span>
+                                      <span id="ExpS">1</span>
+                                  </span>
+                                  <br>
+                                  <span id="GCSExp">
+                                      <span id="GCsE">Exp:</span>
+                                      <span id="ExpGCS">0.1</span>
+                                  </span>
+                                  <br>
+                                  <span id="BcSExp">
+                                      <span id="BCsE">Exp:</span>
+                                      <span id="ExpBcS">1</span>
+                                  </span>
+                                  <br>
+                              </span> 
+                          </div>
+                      </div>
+                      <div id="Zone-City-Gates">
+                          <span id="Zone-City-Gates-Title">City Gates</span>
+                          <div id="Beg-Action">
+                              <button id="Beg" onclick="actionBeg(1)">Beg</button>
+                              <span id="Beg-ToolTip">
+                                  <strong id="TitleBeg">Like a Professional!</strong>
+                                  <span id="BegInf"></span>
+                                  <br>
+                                  <span id="BegPHLo">
+                                      <span id="BegPHT">PH:</span>
+                                      <span id="BegPH"></span>
+                                  </span>
+                                  <p>
+                                  <span id="DescriptionBeg">
+                                      Like a fish entering water, or a worm entering land...
+                                  </span>
+                                  <br>
+                                  <span id="BegCurrM">
+                                      <span id="BegCMT">Copper Coins:</span>
+                                      <span id="BegCm"></span>
+                                  </span>
+                                  <br>
+                                  <span id="BegPersXp">
+                                      <span id="BegPerT">Exp:</span>
+                                      <span id="BegPTM">1</span>
+                                  </span>
+                              </span>  
+                          </div>
+                          <div id="Eat-Action">
+                              <button id="Eat" onclick="actionEat(1)">Eat</button>
+                              <span id="Eat-ToolTip">
+                                  <strong id="TitleEat">Licking your Fingers!</strong>
+                                  <span id="EatInf"></span>
+                                  <p>
+                                  <span id="DescriptionEat">
+                                      Your stomach is satisfied, but your taste buds hate you.
+                                  </span>
+                                  <br>
+                                  <span id="EatFoodQ">
+                                      <span id="EatFoodT">Rotten Food:</span>
+                                      <span id="EatFoodN">-1</span>
+                                  </span>
+                                  <br>
+                                  <span id="EatTypeQPhP">
+                                      <span id="EatTypeTPhP">PH:</span>
+                                      <span id="EatTypeNPhP">0.2</span>
+                                  </span>
+                              </span>  
+                          </div>
+                      </div>
+                      <div id="Zone-City">
+                          <span id="Zone-City-Title">City</span>
+                          <div id="Thieve-Action">
+                              <button id="Thieve"onclick="actionThieve(1)">Thieve</button>   
+                              <span id="Thieve-ToolTip">
+                                    <strong id="TitleThieve">Security check!</strong>
+                                    <span id="ThieveInf"></span>
+                                    <br>
+                                    <span id="ThievePHLo">
+                                        <span id="ThievePHT">PH:</span>
+                                        <span id="ThievePH"></span>
+                                    </span>
+                                    <p>
+                                    <span id="DescriptionThieve">
+                                        Someone needs to check if those pockets are safe to use.
+                                    </span>
+                                    <br>
+                                    <span id="ThieveCurrM">
+                                        <span id="ThieveCMT">Copper Coins:</span>
+                                        <span id="ThieveCm"></span>
+                                    </span>
+                                    <br>
+                                    <span id="TSlotT">
+                                        <span id="TTD">Days:</span>
+                                        <span id="DTT">0.5</span>
+                                    </span>
+                                    <br>
+                                    <span id="ThieveSteXp">
+                                        <span id="ThieveSteT">Exp:</span>
+                                        <span id="ThieveSTM">1</span>
+                                    </span>
+                              </span>  
+                          </div>
+                          <div id="Rob-Action">
+                              <button id="Rob"onclick="actionRob(1)">Rob</button>   
+                              <span id="Rob-ToolTip">
+                                    <strong id="TitleRob">Give me your pants!</strong>
+                                    <span id="RobInf"></span>
+                                    <br>
+                                    <p>
+                                    <span id="DescriptionRob">
+                                        Even when stealing, no corner is left unchecked.
+                                    </span>
+                                    <br>
+                                    <span id="RobAcFS">
+                                        <span id="RobESpaw">Targets:</span>
+                                        <span id="RobENR">1</span>
+                                        <span id="RobSENRTY">x</span>
+                                    </span>
+                                    <br>
+                                    <span id="RSlotT">
+                                        <span id="RRTD">Days:</span>
+                                        <span id="DRRT">1</span>
+                                    </span>
+                                    <br>
+                                    <span id="RSteXp">
+                                        <span id="RobSteT">Exp:</span>
+                                        <span id="RobSTM">10</span>
+                                    </span>
+                                    <span id="RRMSWD">
+                                         <span id="RWLT1">
+                                            <span id="RTLC">Defeat</span> 
+                                            <span id="RWLSSP">:</span>
+                                         </span>
+                                         <span id="RSRGWD1">
+                                            <span id="RRRN">Resources:</span>
+                                            <span id="SRRRDRS">-</span>
+                                            <span id="RRRNTQ">???</span>
+                                         </span>   
+                                         <span id="RSDWDCMT1">
+                                          <span id="RRCCN">Money:</span>
+                                          <span id="SSRCCRS">-</span>
+                                          <span id="CRCTBM">???</span>
+                                       </span>   
+                                    </span>
+                              </span>  
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div id="Skills-Border">
+                <div id="SkillList">
+                  <div id="Skils-Tier0">
+                      <div id="SkillsSlash">
+                          <button id="Slash">Slash</button>
+                          <span id="Slash-ToolTip">
+                            <strong id="TitleSla">An Innocent Game</strong>
+                            <br>
+                            <span id="LvSlasXp">
+                              <span id="XpSl">0</span>
+                              <span id="XpS">/</span>
+                              <span id="XpCapSl">0</span>
+                            </span>
+                            <p id="DescriptionSla">
+                              You dont know what you're doing, 
+                              but at least you have fun..
+                            </p>
+                          </span> 
+                          <span id="SlashLv">
+                            <span id="LvS">Lv</span>
+                            <span id="LvNumS">0</span>
+                          </span>
+                          <span id="SlashLv-ToolTip">
+                            <strong id="TitleSlalv">Slash</strong>
+                            <br>
+                            <p id="DescriptionSlalv">
+                              <span id="Lv0Sl">
+                                Level 0-
+                                <span id="SwiCPL">1</span> Swing Per Click.
+                              </span><br>
+                              <span id="Lv1Sl">
+                                Level 1-
+                                <span id="SwiCPL">2</span> Swing Per Click.
+                              </span><br>
+                              <span id="Lv2Sl">
+                                Level 2- 
+                                <span id="SwiCPL">4</span> Swing Per Click.
+                              </span><br>
+                              <span id="Lv3Sl">
+                                Level 3-
+                                <span id="SwiCPL">7</span> Swing Per Click.
+                              </span><br>
+                              <span id="Lv4Sl">
+                                Level 4-
+                                <span id="SwiCPL">17</span> Swing Per Click.
+                              </span><br>
+                              <span id="Lv5Sl">
+                                Level 5-
+                                <span id="SwiCPL">43</span> Swing Per Click.
+                              </span><br>
+                              <span id="LvUpSl">
+                                <span id="TitLvUpSl"> Level ?-</span>
+                                <span id="SwiCPLS">?</span> 
+                                <span id="SwiQM">????? ??? ?????.</span>
+                              </span><br>
+                            </p>
+                          </span> 
+                      </div>    
+                      <div id="SkillsGripControl">
+                          <button id="GripControl">Grip Control</button>
+                          <span id="GripControl-ToolTip">
+                            <strong id="TitleGC">Grip Harder!</strong>
+                            <br>
+                            <span id="LvGCXp">
+                              <span id="XpGCE">0</span>
+                              <span id="XpGC">/</span>
+                              <span id="XpGcC">0</span>
+                            </span>
+                            <p id="DescriptionGC">
+                              Maybe if you stop gripping the stick so hard, 
+                              it wouldn't break.
+                            </p>
+                          </span> 
+                          <span id="GripControlLv">
+                            <span id="LvGC">Lv</span>
+                            <span id="LvNumGC">0</span>
+                          </span>
+                          <span id="GripControlLv-ToolTip">
+                            <strong id="TitleGClv">Grip Control</strong>
+                            <br>
+                            <p id="DescriptionGClv">
+                              <span id="Lv0GCl">
+                                Level 0-
+                                <span id="GCCPL">100</span> Durability Per Stick.
+                              </span><br>
+                              <span id="Lv1GCl">
+                                Level 1-
+                                <span id="GCCPL">200</span> Durability Per Stick.
+                              </span><br>
+                              <span id="Lv2GCl">
+                                Level 2-
+                                <span id="GCCPL">400</span> Durability Per Stick.
+                              </span><br>
+                              <span id="Lv3GCl">
+                                Level 3-
+                                <span id="GCCPL">800</span> Durability Per Stick.
+                              </span><br>
+                              <span id="Lv4GCl">
+                                Level 4-
+                                <span id="GCCPL">2000</span> Durability Per Stick.
+                              </span><br>
+                              <span id="Lv5GCl">
+                                Level 5-
+                                <span id="GCCPL">4000</span> Durability Per Stick.                            
+                              </span><br>
+                              <span id="LvUpGC">
+                                <span id="TitLvUpGC"> Level ?-</span>
+                                <span id="DUCPGC">?</span> 
+                                <span id="DuQGC">?????????? ??? ?????.</span>
+                              </span><br>
+                            </p>
+                          </span> 
+                      </div>
+                      <div id="SkillsBreathingControl">
+                          <button id="BreathingControl">Breathing Control</button>
+                          <span id="BreathingControl-ToolTip">
+                            <strong id="TitleBC">Breathe!</strong>
+                            <br>
+                            <span id="LvBCXp">
+                              <span id="XpBCE">0</span>
+                              <span id="XpBC">/</span>
+                              <span id="XpBcC">0</span>
+                            </span>
+                            <p id="DescriptionBC">
+                              This is not sustainable much longer, you have little food, little strength... 
+                              you need to resist just a little longer... if only... 
+                              you could breathe slower...
+                            </p>
+                          </span> 
+                          <span id="BreathingControlLv">
+                            <span id="LvBC">Lv</span>
+                            <span id="LvNumBC">0</span>
+                          </span>
+                          <span id="BreathingControlLv-ToolTip">
+                            <strong id="TitleBClv">Breathing Control</strong>
+                            <br>
+                            <p id="DescriptionBClv">
+                              <span id="Lv0BCl">
+                                Level 0-
+                                <span id="BCCRN">60</span> Breathing Per Swing.
+                              </span><br>
+                              <span id="Lv1BCl">
+                                Level 1-
+                                <span id="BCCRN">30</span> Breathing Per Swing.
+                              </span><br>
+                              <span id="Lv2BCl">
+                                Level 2-
+                                <span id="BCCRN">15</span> Breathing Per Swing.
+                              </span><br>
+                              <span id="Lv3BCl">
+                                Level 3-
+                                <span id="BCCRN">5</span> Breathing Per Swing.
+                              </span><br>
+                              <span id="Lv4BCl">
+                                Level 4-
+                                <span id="BCCRN">3</span> Breathing Per Swing.
+                              </span><br>
+                              <span id="Lv5BCl">
+                                Level 5-
+                                <span id="BCCRN">2</span> Breathing Per Swing.
+                              </span><br>
+                              <span id="Lv6BCl">
+                                Level 6-
+                                <span id="BCCRN">1</span> Breathing Per Swing.
+                              </span><br>
+                              <span id="LvUpBC">
+                                <span id="TitLvUpBC"> Level ?-</span>
+                                <span id="BCRMNM">?</span> 
+                                <span id="BCDRU">????????? ??? ?????.</span>
+                              </span><br>
+                            </p>
+                          </span> 
+                      </div>
+                      <div id="SkillsPersuade">
+                          <button id="Persuade">Persuade</button>
+                          <span id="Persuade-ToolTip">
+                            <strong id="TitlePersuade">Silver Work!</strong>
+                            <br>
+                            <span id="LvPXp">
+                              <span id="XpPI">0</span>
+                              <span id="XpP">/</span>
+                              <span id="XpPEN">0</span>
+                            </span>
+                            <p id="DescriptionPers">
+                              You've run out of ideas... the training and legends you heard from the 
+                              great knights can only take you so far... you really don't know how 
+                              you could improve further... but... you need more money... 
+                              even if it goes against your morals, you need... persuasion.
+                            </p>
+                          </span> 
+                          <span id="PersuadeLv">
+                            <span id="LvPers">Lv</span>
+                            <span id="LvNumPers">0</span>
+                          </span>
+                          <span id="PersuadeLv-ToolTip">
+                            <strong id="TitlePlv">Persuade</strong>
+                            <br>
+                            <p id="DescriptionPlv">
+                            <span id="Lv0PI">
+                              Level 0-
+                              <span id="PLCRL">1</span> Persuade pr Lvl.                       
+                            </span><br>
+                            <span id="Lv1PI">
+                              Level 1-
+                              <span id="PLCRL">2</span> Persuade pr Lvl.                       
+                            </span><br>
+                            <span id="Lv2PI">
+                              Level 2-
+                              <span id="PLCRL">3</span> Persuade pr Lvl.                       
+                            </span><br>
+                            <span id="Lv3PI">
+                              Level 3-
+                              <span id="PLCRL">4</span> Persuade pr Lvl.                       
+                            </span><br>
+                            <span id="Lv4PI">
+                              Level 4-
+                              <span id="PLCRL">5</span> Persuade pr Lvl.                       
+                            </span><br>
+                            <span id="Lv5PI">
+                              Level 5-
+                              <span id="PLCRL">6</span> Persuade pr Lvl.                       
+                            </span><br>
+                            <span id="Lv6PI">
+                              Level 6-
+                              <span id="PLCRL">8</span> Persuade pr Lvl.                       
+                            </span><br>
+                            <span id="Lv7PI">
+                              Level 7-
+                              <span id="PLCRL">12</span> Persuade pr Lvl.                       
+                            </span><br>        
+                            <span id="LvUpP">
+                              <span id="TitLvUpP"> Level ?-</span>
+                              <span id="PRMNM">?</span> 
+                              <span id="PTMM">???????? ?? ???.</span>
+                            </span><br>
+                            </p>
+                          </span> 
+                      </div>
+                      <div id="SkillsSteal">
+                          <button id="Steal">Steal</button>
+                          <span id="Steal-ToolTip">
+                            <strong id="TitleSteal">Walking in the Ruin</strong>
+                            <br>
+                            <span id="LvSteXp">
+                              <span id="XpSteI">0</span>
+                              <span id="XpSte">/</span>
+                              <span id="XpSteN">0</span>
+                            </span>
+                            <p id="DescriptionSteal">
+                              You have no choice, you need more ways to make money... 
+                              and fast!, you can only think about falling down the path of ruin once again... 
+                              and learning something you never thought you would learn, stealing... 
+                              to survive in this cruel world.
+                            </p>
+                          </span> 
+                          <span id="StealLv">
+                            <span id="LvStea">Lv</span>
+                            <span id="LvNumStea">0</span>
+                          </span>
+                          <span id="StealLv-ToolTip">
+                            <strong id="TitleStelv">Steal</strong>
+                            <br>
+                            <p id="DescriptionStelv">
+                            <span id="Lv0SteI">
+                              Level 0-
+                              <span id="SteLCRL">1</span><span id="StePPL">%</span> Steal pr Lvl.                       
+                            </span><br>
+                            <span id="Lv1SteI">
+                              Level 1-
+                              <span id="SteLCRL">2</span><span id="StePPL">%</span> Steal pr Lvl.                       
+                            </span><br>
+                            <span id="Lv2SteI">
+                              Level 2-
+                              <span id="SteLCRL">3</span><span id="StePPL">%</span> Steal pr Lvl.                       
+                            </span><br>
+                            <span id="Lv3SteI">
+                              Level 3-
+                              <span id="SteLCRL">4</span><span id="StePPL">%</span> Steal pr Lvl.                       
+                            </span><br>
+                            <span id="Lv4SteI">
+                              Level 4-
+                              <span id="SteLCRL">5</span><span id="StePPL">%</span> Steal pr Lvl.                       
+                            </span><br>
+                            <span id="Lv5SteI">
+                              Level 5-
+                              <span id="SteLCRL">8</span><span id="StePPL">%</span> Steal pr Lvl.                       
+                            </span><br>
+                            <span id="Lv6SteI">
+                              Level 6-
+                              <span id="SteLCRL">10</span><span id="StePPL">%</span> Steal pr Lvl.                       
+                            </span><br>
+                            <span id="Lv7SteI">
+                              Level 7-
+                              <span id="SteLCRL">25</span><span id="StePPL">%</span> Steal pr Lvl.                       
+                            </span><br>
+                            <span id="Lv8SteI">
+                              Level 8-
+                              <span id="SteLCRL">50</span><span id="StePPL">%</span> Steal pr Lvl.                       
+                            </span><br>
+                            <span id="LvUpSte">
+                              <span id="TitLvUpSte"> Level ?-</span>
+                              <span id="STEMNM">?</span><span id="StePPL">% </span> 
+                              <span id="STETMM">????? ?? ???.</span>
+                            </span><br>
+                            </p>
+                          </span> 
+                      </div>
+                      <div id="Lines">
+                          <div id="SlashxGripControlLine">
+                              <span id="ConnectionLine1"></span>
+                          </div>
+                          <div id="GripCxBreathingCLine">
+                            <span id="ConnectionLine2"></span>
+                          </div>
+                          <div id="SlashxPersuadeLine">
+                            <span id="ConnectionLine3"></span>
+                          </div>
+                          <div id="PersuadexStealLine">
+                            <span id="ConnectionLine4"></span>
+                          </div>
+                      </div> 
+                  </div>
+                </div>
+              </div>
+              <div id="Shop-Border">
+                <div id="Shop-Tabs-List">
+                        <div id="ShopoftheCaravans-Tab" onclick=tabs(1,2)>
+                          <button id="Shop-Caravans"><strong id="Caravans">C</strong></button>
+                          <span id="ShopCaravans-Tooltip">
+                          <strong id="ShopCaravansTitle">Merchants Caravans</strong>
+                          <p>
+                          <span id="Description-Caravans">
+                            One of the many carriages that bring hope and greed to those who look at them, 
+                            but most of all, those that bring wealth...and food to the cities.
+                          </span>
+                          </span> 
+                        </div>
+                        <div id="ShopoftheOldCityMarket-Tab" onclick=tabs(2,2)>
+                          <button id="Shop-OldCityMarket"><strong id="OldCityMarket">M</strong></button>      
+                              <span id="ShopOldCityMarket-Tooltip">
+                                <strong id="ShopOldCityMarketTitle">Old City Market</strong>                       
+                                  <p>                           
+                                  <span id="Description-OldCityMarket">
+                                    Destination of all visitors, initiator of all exchanges in the city, 
+                                    the city's old market, as deep and intricate as the thoughts of its visitors, 
+                                    but as bright and busy as the joy and hope it brings to everyday life, 
+                                    in this city to the point of collapse.
+                                  </span>
+                              </span> 
+                        </div>
+                        <div id="ShopoftheKnightsAcademy-Tab" onclick=tabs(3,2)>
+                          <button id="Shop-KnightsAcademy"><strong id="KnightsAcademy">K</strong></button>      
+                              <span id="KnightsAcademy-Tooltip">
+                                <strong id="KnightsAcademyTitle">Knights Academy</strong>                       
+                                  <p>                           
+                                  <span id="Description-KnightsAcademy">
+                                    Origin of the dreams of many, origin of the great dream that you once had, 
+                                    the academy of knights, where once the extraordinary path was taught to all, 
+                                    where once greed and envy did not exist... a shell of what once it was, 
+                                    full of broken dreams...
+                                  </span>
+                              </span> 
+                        </div>  
+                        <div id="ShopoftheBlackMarket-Tab" onclick=tabs(4,2)>
+                          <button id="Shop-BlackMarket"><strong id="BlackMarket">B</strong></button>      
+                              <span id="BlackMarket-Tooltip">
+                                <strong id="BlackMarketTitle">Black Market</strong>                       
+                                  <p>                           
+                                  <span id="Description-BlackMarket">
+                                    Between rumors and whispers, lost among the streets and the ruins of 
+                                    the city, the destination of all double-faced visitors, the black market, 
+                                    which with the corruption of the city, has managed to expand this gray area, 
+                                    towards the darkness of this era, and the light that once sought to hide..
+                                  </span>
+                              </span> 
+                        </div>  
+                </div>
+                <div id="ShopList">
+                  <div id="Shop-Tier0">              
+                      <div id="Caravan-Border">
+                          <div id="CaravanShop">
+                            <span id="Caravan1">Caravan Warehouse</span>  
+                              <div id="Caravan-Tier0Shop">
+                                <div id="Caravan-MoldyBread">
+                                      <span id="MoldyBread"onclick=shopbuy(1,1)>Moldy Bread</span>
+                                      <span id="MoldyBread-Tooltip">
+                                        <strong id="MoldyBreadTitle">Moldy Bread</strong>
+                                        <br>
+                                        <span id="NumberofMB">
+                                          <span id="Number-TMB">Moldy Bread:</span>
+                                          <span id="Number-MB">1</span>
+                                        </span>
+                                        <span id="MBInf"></span>
+                                        <p>
+                                        <span id="Description-MB">
+                                          As its name suggests, it is poor quality moldy bread sold by a caravan
+                                          that may have traveled for months.     
+                                        </span>
+                                        <p>
+                                        <span id="PriceofMB">
+                                          <span id="Price-TMB">Price:</span>
+                                          <span id="Price-MB">4</span>
+                                          <Span id="Price-TCC"> Copper Coins</Span>
+                                        </span>
+                                      </span>
+                                </div>
+                                <div id="Caravan-PocketCoinBag">
+                                      <span id="PocketCoinBag"onclick=shopbuy(2,1)>Pocket Coin Bag</span>
+                                      <span id="PocketCoinBag-Tooltip">
+                                        <strong id="PocketCoinBagTitle">Pocket Coin Bag</strong>
+                                        <br>
+                                        <span id="NumberofPCB">
+                                          <span id="Number-TPCB">Pocket Coin Bag:</span>
+                                          <span id="Number-PCB">1</span>
+                                        </span>
+                                        <br>
+                                        <span id="NumberofPCBSpa">
+                                          <span id="Number-PCBSPTUP">Money:</span>                             
+                                          +<span id="Number-PCBSPUp">50</span> Storage
+                                        </span>
+                                        <span id="PCBInf"></span>
+                                        <p>
+                                        <span id="Description-PCB">
+                                          Nothing more than a small bag made of unknown animal skins, 
+                                          capable of helping you keep your money close to your body...
+                                        </span>
+                                        <span id="NumberofPCBSpa">
+                                          <span id="Number-PCBLCT">Limit:</span>
+                                          <span id="Number-PCBLCU">3</span>
+                                        </span>
+                                        <p>
+                                        <span id="PriceofPCB">
+                                          <span id="Price-TPCB">Price:</span>
+                                          <span id="Price-PCB">10</span>
+                                          <Span id="Price-TCCPCB"> Copper Coins</Span>
+                                        </span>
+                                      </span>
+                                </div>
+                                <div id="Caravan-Straw">
+                                  <span id="Straw"onclick=shopbuy(3,1)>Straw</span>
+                                  <span id="Straw-Tooltip">
+                                    <strong id="StrawTitle">Straw</strong>
+                                    <br>
+                                    <span id="NumberofS">
+                                      <span id="Number-TS">Straw:</span>
+                                      <span id="Number-S">1</span>
+                                    </span>
+                                    <span id="SInf"></span>
+                                    <p>
+                                    <span id="Description-S">
+                                      As dry and dead as the time in which it was harvested, 
+                                      but as hot and dry as the opportunities it brings.  
+                                    </span>
+                                    <p>
+                                    <span id="PriceofS">
+                                      <span id="Price-TS">Price:</span>
+                                      <span id="Price-S">18</span>
+                                      <Span id="Price-TSCC"> Copper Coins</Span>
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>                            
+                          </div>
+                      </div>
+                      <div id="OldCityMarket-Border">
+                        <div id="OldCityMarketShop">
+                            <span id="OldCityMarket1">Old Market Street</span> 
+                              <div id="OldCityMarket-Tier0Shop">
+                                  <div id="OldCityMarket-WoodenPlanks">
+                                    <span id="WoodenPlanks"onclick=shopbuy(1,2)>Wooden Planks</span>
+                                    <span id="WoodenPlanks-Tooltip">
+                                      <strong id="WoodenPlanksTitle">Wooden Planks</strong>
+                                      <br>
+                                      <span id="NumberofWP">
+                                        <span id="Number-TWP">Wooden Planks:</span>
+                                        <span id="Number-WP">1</span>
+                                      </span>
+                                      <span id="WPInf"></span>
+                                      <p>
+                                      <span id="Description-WP">
+                                        As alive and tenacious as the beings who collected it, 
+                                        this piece of wood refuses to lose its shape.   
+                                      </span>
+                                      <p>
+                                      <span id="PriceofWP">
+                                        <span id="Price-TWP">Price:</span>
+                                        <span id="Price-WP">1.5</span>
+                                        <Span id="Price-TSCWP"> Silver Coins</Span>
+                                      </span>
+                                    </span>
+                                  </div>
+                                  <div id="OldCityMarket-SmellyFish">
+                                    <span id="SmellyFish"onclick=shopbuy(2,2)>Smelly Fish</span>
+                                    <span id="SmellyFish-Tooltip">
+                                      <strong id="SmellyFishTitle">Smelly Fish</strong>
+                                      <br>
+                                      <span id="NumberofSF">
+                                        <span id="Number-TSF">Smelly Fish:</span>
+                                        <span id="Number-SF">1</span>
+                                      </span>
+                                      <br>
+                                      <span id="SFInf"></span>
+                                      <p>
+                                      <span id="Description-SF">
+                                        Dried fish left in the air for weeks, with a smell 
+                                        that can kill small animals in seconds, its origin is unknown...
+                                      </span>
+                                      <p>
+                                      <span id="PriceofSF">
+                                        <span id="Price-TSF">Price:</span>
+                                        <span id="Price-SF">23</span>
+                                        <Span id="Price-TSFCC"> Copper Coins</Span>
+                                      </span>
+                                    </span>
+                                  </div>                   
+                                  <div id="OldCityMarket-UnknownMeatSoup">
+                                    <span id="UnknownMeatSoup"onclick=shopbuy(3,2)>Unknown Meat Soup</span>
+                                    <span id="UnknownMeatSoup-Tooltip">
+                                      <strong id="UnknownMeatSoupTitle">Unknown Meat Soup</strong>
+                                      <br>
+                                      <span id="NumberofUMS">
+                                        <span id="Number-TUMS">Unknown Meat Soup:</span>
+                                        <span id="Number-UMS">1</span>
+                                      </span>
+                                      <br>
+                                      <span id="UMSInf"></span>
+                                      <p>
+                                      <span id="Description-UMS">
+                                        As the name suggests, you don't really know where the meat comes from.. 
+                                        you just know that this strange soup makes you feel full..
+                                      </span>
+                                      <p>
+                                      <span id="PriceofUMS">
+                                        <span id="Price-TUMS">Price:</span>
+                                        <span id="Price-UMS">1</span>
+                                        <Span id="Price-TUMSSC"> Silver Coins</Span>
+                                      </span>
+                                    </span>
+                                  </div> 
+                              </div>
+                          </div>
+                      </div>
+                      <div id="KnightsAcademy-Border">
+                          <div id="KnightsAcademyShop">
+                            <span id="KnightsAcademy1">Knights Academy</span> 
+                                <div id="KnightsAcademy-Wall">                              
+                                  <div id="KnightsAcademy-TalentTest">
+                                    <span id="TalentTest"onclick=shopbuy(1,3)>Talent Test</span>
+                                    <span id="TalentTest-Tooltip">
+                                        <strong id="TalentTestTitle">Talent Test</strong>
+                                        <br>
+                                        <span id="TTInf"></span>
+                                        <p>
+                                        <span id="Description-TT">
+                                          Before the great doors where once your dreams and hopes 
+                                          were broken by not having talent, you take a step forward, 
+                                          with only a stick in your hand...
+                                        </span>
+                                        <p>
+                                        <span id="PriceofTT">
+                                          <span id="Price-TTT">Price:</span>
+                                          <span id="Price-TT">5</span>
+                                          <span id="Price-TTFGC"> Gold Coins</span>
+                                        </span>
+                                    </span>
+                                  </div>                   
+                                </div>
+                          </div>                   
+                      </div>
+                      <div id="BlackMarket-Border">
+                        <div id="BlackMarketShop">
+                          <span id="BlackMarket1">Black Market Street</span> 
+                            <div id="BlackMarket-Tier0Shop">
+                                <div id="BlackMarket-KnightsBreathingManual">
+                                    <span id="KnightsBreathingManual"onclick=shopbuy(1,5)>Knights Breathing Manual</span>
+                                    <span id="KnightsBreathingManual-Tooltip">
+                                      <strong id="KnightsBreathingManualTitle">Knights Breathing Manual</strong>
+                                      <br>
+                                      <span id="NumberofKBM">
+                                        <span id="Number-TKBM">Knights Breathing Manual:</span>
+                                        <span id="Number-KBM">1</span>
+                                      </span>
+                                      <span id="KBMInf"></span>
+                                      <p>
+                                      <span id="Description-KBM">
+                                        Goal of your dreams, so real and false, that it seems like a joke made by destiny, 
+                                        finding what you have searched for all your life, in the middle of a lawless place 
+                                        in the ruin of the world, presenting in front of you, nothing more and nothing less, 
+                                        than a manual to become a legend, to become a knight capable of defeating armies 
+                                        with one person... capable of fulfilling the dream that once as a child you decided to 
+                                        bet everything... a book, with an opportunity.
+                                      </span>
+                                      <p>
+                                      <span id="PriceofKBM">
+                                        <span id="Price-TKBM">Price:</span>
+                                        <span id="Price-KBM">1</span>
+                                        <Span id="Price-TGCKBM"> Gold Coins</Span>
+                                      </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div id="House-Border">
+                  <div id="House-Walls">
+                    <div id="House-Foundation">
+                        <div id="House-FoundationsSpace">
+                                <div id="House-Transformation">
+                                    <span id="House-Bed">
+                                        <span id="House-TypeBedIncrease0"></span>
+                                        <span id="House-TypeBedIncrease1"></span>
+                                    </span>
+                                    <span id="House-Limit">
+                                        <span id="House-TypeLimitIncrease0"></span>
+                                        <span id="House-TypeLimitType1"></span>
+                                        <span id="House-TypeLimitType2"></span>
+                                    </span>    
+                                </div>     
+                        </div>    
+                    </div>
+                    <div id="House-Foundation-Info">
+                        <div id="House-Info">
+                          <div id="HouseTypeBed-Info">
+                                <span id="HouseTypeBed-Title">Straw Bed</span>
+                                <span id="HouseTypeBed-Tooltip">
+                                  <strong id="HouseTypeBedTitle">Straw Bed</strong>
+                                  <p>
+                                  <span id="Description-HTB">
+                                    As simple as throwing straw on the ground, as complicated as ensuring 
+                                    that the shape of a bed remains in the straw, but as beautiful as finally 
+                                    having a place to call home.
+                                  </span>
+                                  <p>
+                                  <span id="UpgradesofHTB">
+                                      <span id="Upgrades-THTB">Upgrades:</span>
+                                      <br>
+                                      <span id="Resources-Upgrade-HTB">
+                                          <span id="Upgrades-HTBR">Resources:</span>:
+                                          +<span id="Upgrades-HTBRN">5</span> Storage
+                                      </span>
+                                      <br>
+                                      <span id="Money-Upgrade-HTB">
+                                          <span id="Upgrades-HTBM">Money:</span>                             
+                                          +<span id="Upgrades-HTBMN">50</span> Storage
+                                      </span>
+                                  </span>
+                                </span>
+                          </div>
+                          <div id="HouseTypeLimit-Info">
+                            <span id="HouseTypeLimit-Title">Foundation Fence</span>
+                            <span id="HouseTypeLimit-Tooltip">
+                              <strong id="HouseTypeLimtTitle">Foundation Fence</strong>
+                              <p>
+                              <span id="Description-HTL">
+                                Eliminating weeds from the grass, feeling a new floor full of warmth, 
+                                looking at your new door...this can now be called a home capable of 
+                                withstanding a party, right?
+                              </span>
+                              <p>
+                              <span id="UpgradesofHTL">
+                                  <span id="Upgrades-THTL">Upgrades:</span>
+                                  <br>
+                                  <span id="Resources-Upgrade-HTL">
+                                      <span id="Upgrades-HTLR">Resources:</span>:
+                                      +<span id="Upgrades-HTLRN">10</span> Storage
+                                  </span>
+                                  <br>
+                                  <span id="Money-Upgrade-HTL">
+                                      <span id="Upgrades-HTLM">Money:</span>                             
+                                      +<span id="Upgrades-HTLMN">25</span> Storage
+                                  </span>
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                    </div>
+                    <div id="House-Upgrades">
+                        <div id="House-Tier0">
+                            <div id="Foundation-HouseCreation">
+                                <span id="HouseCreation"onclick=shopbuy(1,4)>House Foundation</span>
+                                <span id="HouseCreation-Tooltip">
+                                    <strong id="HouseCreationTitle">House Foundation</strong>
+                                    <br>
+                                    <span id="HCInf"></span>
+                                    <p>
+                                    <span id="Description-HC">
+                                      Like a dream you walked through the streets and forests without 
+                                      a place to call home, in this desolate era full of despair, 
+                                      you decided to stand up, so with your own hands, you decide 
+                                      to create your own home, after all, you need more space to work...
+                                    </span>
+                                    <p>
+                                    <span id="RequerimentsofHC">
+                                      <span id="Requeriments-THC">Requeriments:</span>
+                                      <span id="Requeriments-HC">2</span>
+                                      <span id="Requeriments-THCCC"> Straw</span>
+                                    </span>
+                                </span>
+                            </div>   
+                            <div id="Foundation-HouseExpansion1">
+                                <span id="HouseExpansion1"onclick=shopbuy(2,4)>House Expansion</span>
+                                <span id="HouseExpansion1-Tooltip">
+                                    <strong id="HouseExpansion1Title">House Expansion</strong>
+                                    <br>
+                                    <span id="HE1Inf"></span>
+                                    <p>
+                                    <span id="Description-HE1">
+                                      Waking up in your new home, you look at the little broken 
+                                      and deformed pieces of straw around you... you see what once 
+                                      had shape... changing... decaying... breaking it like this era once was...
+                                      you feel the weight of this dark world...and you decide to stand up again, 
+                                      deciding to fight.
+                                    </span>
+                                    <p>
+                                    <span id="RequerimentsofHE1">
+                                      <span id="Requeriments-THE1">Requeriments:</span>
+                                      <span id="Requeriments-HE1">21</span>
+                                      <span id="Requeriments-THE1CC"> Straw</span>
+                                    </span>
+                                </span>
+                            </div>   
+                            <div id="Foundation-HouseLimit1">
+                                <span id="HouseLimit1"onclick=shopbuy(3,4)>Limit Expansion</span>
+                                <span id="HouseLimit1-Tooltip">
+                                    <strong id="HouseLimit1Title">Limit Expansion</strong>
+                                    <br>
+                                    <span id="HL1Inf"></span>
+                                    <p>
+                                    <span id="Description-HL1">
+                                      The rain was pouring down in the middle of the night, 
+                                      your home swayed from one side to the other as you tried to fall asleep... 
+                                      but that night you couldn't help but open your eyes and realize something...
+                                      you don't have door to greet guests... but that will change tomorrow...
+                                    </span>
+                                    <p>
+                                    <span id="RequerimentsofHL1">
+                                      <span id="Requeriments-THL1">Requeriments:</span>
+                                      <span id="Requirements-HL1Stra">
+                                          <span id="Requeriments-HL1S">6</span>
+                                          <span id="Requeriments-THL1CCS"> Straw</span>
+                                      </span>
+                                      <br>
+                                      <span id="Requirements-HL1Woden">
+                                          <span id="Requeriments-HL1WP">1</span>
+                                          <span id="Requeriments-THL1CCWP"> Wooden Planks</span>
+                                      </span>     
+                                    </span>
+                                </span>
+                            </div>   
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <div id="Plans-Border">                 
+                  <div id="Plans-Active-List">
+                       <div id="Skills-Active-List">
+                            <div id="SkillsActive-Info">
+                                 <span id="SkillsActive-Title">Physical Skills</span>
+                                 <span id="SkillsActive-Info-Tooltip">
+                                      <strong><span id="SkillsActive-Info-Title">Physical Skills</span></strong>
+                                      <p>
+                                      <span id="DescriptionSkillsActiveInfo">
+                                        Trained with sweat and tears, forged with 
+                                        thousands of hours of training, memorized by your muscles to the 
+                                        point of unconsciousness... maybe they are enough... 
+                                        maybe they are...
+                                      </span>
+                                 </span>
+                            </div>
+                            <div id="SkillActive-1-Slash"> 
+                               <div id="SkillsActive-Slash-Info">
+                                  <span id="SkillsActive-1">~ Slash</span>
+                                  <span id="SkillsActive-1-Info-Tooltip">
+                                        <strong><span id="SkillsActive-1--Info-Title">Slash</span></strong>
+                                        <p>
+                                        <span id="DescriptionSkillsActive-1-Info">
+                                          You swing your weapon like you always have...
+                                        </span>
+                                        <p>
+                                        <span id="Lv-Slash-Perks-Active">        
+                                            <span id="TitleSPAPerkInfo">~ Perks ~</span>
+                                            <br>
+                                            <span id="Stick-Perk-SlashOnly">Stick: </span>
+                                            <span id="Stick-Perk-GridControlEffect">-0.1</span>
+                                            <span id="Stick-Perk-SlashInfo">(No Weapon)</span>
+                                            <br>
+                                            <span id="TitleSPAPerk">LvL-</span>
+                                            <span id="SkillsLvPerkSlash">Max</span>:
+                                            <br>
+                                            <span id="Effect-Perk-Slash"> 0.1</span>
+                                            <span id="TitleSDAPerk">Damage pr</span>
+                                            <span id="Miliseconds-Perk-Slash">3</span>
+                                            <span id="TitleSMAPerk">Second</span>
+                                        </span>
+                                  </span>
+                               </div>  
+                               <button id="SkillsActive-1-Button" onclick=plans(1)></button>
+                               <button id="SkillsActive-Activation-1"onclick=plans(1)>x</button>
+                            </div>       
+                       </div>
+                  </div>
+                  <div id="Plans-Arrangement-List"> 
+                          <div id="Contingency-Strategy-Info">
+                            <span id="Contingency-Strategy-Title">Contingency Strategy</span>  
+                            <span id="Contingency-Strategy-Tooltip">
+                              <strong><span id="Contingency-StrategyTitleInfo">Contingency Strategy</span></strong>
+                              <p>
+                              <span id="DescriptionContingencyStrategyInfo">You don't expect to need it, 
+                                you don't expect it to be necessary... but it never hurts to be cautious 
+                                in this era... it never hurts... to be cautious, to continue living.</span>
+                            </span>
+                          </div>    
+                          <div id="Contingency-Strategy-Percentage">
+                                  <div id="ContingencyStrategyInfo-Slots">
+                                        <span id="ContingencyStrategyPerce-Title">Slots: </span>
+                                        <span id="Contingency-StrategyPerce-Tooltip">
+                                          <strong><span id="Contingency-StrategyTitleInfoPerce">Concentration</span></strong>
+                                          <p>
+                                          <span id="DescriptionContingencyStrategyInfoPerce">
+                                            Your lack of combat experience limits you, it is difficult 
+                                            to concentrate, or even use multiple attacks... better to 
+                                            concentrate only using one...</span>
+                                        </span>
+                                  </div>
+                                  <div id="ContingencyStrategyInfo-Slots-Percentage">   
+                                      <span id="ContingencyStrategyPerce-Status">0</span>
+                                      <span id="ContingencyStrategyPerce-Separator">/</span>
+                                      <span id="ContingencyStrategyPerce-Total">1</span>
+                                  </div>
+                          </div>
+                          <div id="Contingency-Slots-Skills">
+                               <div id="Contingency-Slot-0">
+                                    <span id="Contingency-Slot-0-Inserted"></span>
+                                    <span id="Contingency-Slot-0-Select"></span>
+                                    <!-- <div id="Dropdown-Contingency-SlotsMenu">
+                                        <span id="Slot-0-Dropdown" onclick=plans(0,0)>None</span>
+                                        <span id="Slot-1-Dropdown" onclick=plans(0,1)>None</span>
+                                    </div> -->
+                               </div>
+                               <!-- The Contingency 0 is Void -->
+                               <div id="Contingency-Slot-1">
+                                    <span id="Contingency-Slot-1-Inserted">None</span>
+                                    <span id="Contingency-Slot-1-Select">None</span>
+                                    <div id="Dropdown-Contingency-SlotsMenu">
+                                        <span id="Slot-0-Dropdown" onclick=plans(0,0)>None</span>
+                                        <span id="Slot-1-Dropdown" onclick=plans(0,1)>None</span>
+                                    </div>
+                               </div>
+                          </div>
+                  </div>
+              </div>
+           </div>
+        </div>
+        <div id="EpochalShift-Border">
+          <div id="EpochalShift-Tab">
+              <span id="EpochalShift-TabT">Epochal Shift</span>
+              <span id="EpochalShift-ToolTip">
+                <strong id="EPSTitle">Changing the Era</strong>
+                <p>
+                <span id="Description-EPS">
+                  Faced with this dark and desolate world, you decide for the first 
+                  time to change your destiny of being a beggar, with a stick in hand, 
+                  you take a step forward, for the first time in a long time.
+                </span>
+              </span>
+          </div>
+          <div id="EpochalShift-List">
+             <div id="EpochalShift-Tier0">
+                  <button id="Enterthecity"onclick=epochalShift(1)>Enter the City</button>
+                  <span id="Enterthecity-ToolTip">
+                     <strong id="ETCTitle">Entering the City</strong>
+                     <p>
+                     <span id="Description-ETC">
+                      Feeling ready and confident, you finally gather the courage 
+                      to enter the city with just a few sticks, some copper coins, 
+                      and some moldy bread in hand... hoping, for a better future. 
+                     </span>
+                     <br>
+                     <p>
+                     <span id="CGUT">
+                       <span id="UnCTR">Unlock:</span>
+                       <span id="UnCGTR">City</span>
+                     </span>
+                     <br>
+                     <span id="CGPE1">
+                        <span id="FPCT">Price:</span>
+                        <span id="PCTTEEPS">2.00</span>
+                        <span id="PBTICFDCG">Silver Coins</span>
+                     </span>
+                  </span>
+             </div>
+          </div>
+        </div>   
+        <div id="Panel-Border">
+            <div id="Panel-Tabs-List">
+                <div id="Resources-Tab" onclick=tabs(1,3)>
+                    <button id="Panel-Resources"><span id="ResourcesTab">Resources</span></button>
+                </div>
+                <div id="Battle-Tab" onclick=tabs(2,3)>
+                    <button id="Panel-Battle"><span id="BattleTab">Battle</span></button>
+                </div>
+            </div>
+            <div id="Panel-Border-List">
+                <div id="Resources-Border">
+                  <div class="ResourcesList">
+                      <div Id="Resources-Tier0"> 
+                          <div id="Stick-Material">
+                              <div id="Stick-Resource">
+                                <span id="SticknameR">Stick</span>
+                                <span id="StickPosition">
+                                  <span id="StickCount">0</span><span id="StickSeR">/</span><span id="StickCap">10</span>
+                                </span>
+                              </div>
+                              <span id="Stick-RT">
+                                    <strong id="TitleStiR">Stick</strong>
+                                    <span id="StickInfR"></span>
+                                    <p id="DescriptionStiR">
+                                        Hunger plagues the world, and your misfortunes take you 
+                                        to these dark lands, where only a simple stick is enough 
+                                        to wake you up from your despair.
+                                    </p>
+                              </span>
+                          </div>
+                          <div id="Currency-Material">
+                              <div id="Currency-Resource">
+                                <span id="CurrencynameR">Copper Coins</span>
+                                <span id="CurrencyPosition">
+                                  <span id="CurrencyCount">0</span><span id="CurrencySeR">/</span><span id="CurrencyCap">50</span>
+                                </span>
+                              </div>
+                              <span id="Currency-RT">
+                                    <strong id="TitleCurreR">Copper Coins</strong>
+                                    <span id="CurrencyInfR"></span>
+                                    <p id="DescriptionCurreR">
+                                      So small and easy to carry, but so big and heavy that they can affect 
+                                      the lives of Billions, it is easy to forget their value in their smallness, 
+                                      but it is difficult to forget their value and their heaviness in this dark age...
+                                    </p>
+                              </span>
+                          </div>
+                          <div id="Food-Material">
+                              <div id="Food-Resource">
+                                <span id="FoodnameR">Rotten Food</span>
+                                <span id="FoodPosition">
+                                  <span id="FoodCount">0</span><span id="FoodSeR">/</span><span id="FoodCap">10</span>
+                                </span>
+                              </div>
+                              <span id="Food-RT">
+                                    <strong id="TitleFoodR">Rotten Food</strong>
+                                    <span id="FoodInfR"></span>
+                                    <p id="DescriptionFoodR">
+                                      The product of disaster, the savior of all living beings, 
+                                      a food that has clearly passed its useful life, but in your hands, 
+                                      his life has just begun.
+                                    </p>
+                              </span>
+                          </div>
+                          <div id="Straw-Material">
+                            <div id="Straw-Resource">
+                              <span id="StrawnameR">Straw</span>
+                              <span id="StrawPosition">
+                                <span id="StrawCount">0</span><span id="StrawSeR">/</span><span id="StrawCap">15</span>
+                              </span>
+                            </div>
+                            <span id="Straw-RT">
+                                  <strong id="TitleStrawR">Straw</strong>
+                                  <span id="StrawInfR"></span>
+                                  <p id="DescriptionStrawR">
+                                    The base of a dry floor on a rainy day, the first material that allowed 
+                                    you to feel the warmth of a bed in this dark world, which fills you with 
+                                    hopelessness... of a better tomorrow.
+                                  </p>
+                            </span>
+                          </div>
+                          <div id="WoodenPlanks-Material">
+                            <div id="WoodenPlanks-Resource">
+                              <span id="WoodenPlanksnameR">Wooden Planks</span>
+                              <span id="WoodenPlanksPosition">
+                                <span id="WoodenPlanksCount">0</span><span id="WoodenPlanksSeR">/</span><span id="WoodenPlanksCap">5</span>
+                              </span>
+                            </div>
+                            <span id="WoodenPlanks-RT">
+                                  <strong id="TitleWoodenPlanksR">Wooden Planks</strong>
+                                  <span id="WoodenPlanksInfR"></span>
+                                  <p id="DescriptionWoodenPlanksR">
+                                    The foundation of all structures, the product of every disaster, 
+                                    the planks that make up the roofs and protect living beings from 
+                                    the rain on the stormiest nights, a material capable of allowing 
+                                    you to have a roof... in this dark world.
+                                  </p>
+                            </span>
+                          </div>
+                          <div id="Linen-Material">
+                            <div id="Linen-Resource">
+                                <span id="LinennameR">Linen</span>
+                                <span id="LinenPosition">
+                                   <span id="LinenCount">0</span><span id="LinenSeR">/</span><span id="LinenCap">10</span>
+                                </span>
+                            </div>
+                            <span id="Linen-RT">
+                                  <strong id="TitleLinenR">Linen</strong>
+                                  <span id="LinenInfR"></span>
+                                  <p id="DescriptionLinenR">
+                                    A fabric woven and spun with hope for the future, but as destroyed 
+                                    and torn as this era full of chaos and blood... a material full of 
+                                    warmth and freshness, full in front of you, of an opportunity... 
+                                    in this dark era...
+                                  </p>
+                            </span>
+                          </div>
+                      </div>
+                  </div>
+                </div> 
+                <div id="Battle-Border">
+                   <div id="Enemy-Border">
+                      <div id="Enemy-Principal-Info">
+                          <div id="Enemy-Info-Title">
+                              <span id="Enemy-Title">None</span>  
+                              <span id="EnemyTitle-Tooltip">
+                                 <strong><span id="EnemyNameTitle">None</span></strong>
+                                 <p>
+                                 <span id="DescriptionEnemy">Nothing is here.</span>
+                              </span>
+                          </div>
+                          <div id="Enemy-Info-Guard">
+                              <span id="Enemy-Guard">N</span>
+                              <span id="EnemyGuard-Tooltip">
+                                 <span id="DescriptionGuardEnemy">Guard</span>
+                              </span>
+                          </div>
+                          <div id="Enemy-Info-Type">
+                              <span id="Enemy-Type">N</span>   
+                              <span id="EnemyType-Tooltip">
+                                <span id="DescriptionTypeEnemy">Type: <strong id="TypeEnemyName">None</strong></span>
+                              </span>  
+                          </div>
+                          <div id="Enemy-Info-Numbers">
+                              <span id="Enemy-Numbers"><span id="x-NumberofEnemys">0</span>x</span>   
+                              <span id="EnemyNumbers-Tooltip">
+                                <span id="DescriptionNumbersEnemy">There is <strong id="NumberEnemys">0</strong> Enemys</span>
+                              </span>
+                          </div>          
+                      </div>
+                      <div id="Enemy-Principal-Health">
+                        <div id="Enemy-PHPHealth-Status">
+                          <div id="PHEnemyInfo">
+                            <span id="PHEnemyIP">PH</span>  
+                            <span id="PHpEnemyT-Tooltip">
+                                <strong id="PHealthEnemyI">Physical Health</strong>
+                                <br>
+                                -<strong id="PHealthEnemyTitle">None</strong>-
+                            </span>
+                          </div>
+                          <div id="Enemy-PHealth">
+                            <div id="EPHealthBar"></div> 
+                            <div id="PHpStatusEnemyT">
+                                <span id="PHpBNormalEnemy">0</span>
+                                <span id="PHpBSeEnemy">/</span>
+                                <span id="PHpBTotalEnemy">0</span>
+                            </div>
+                          </div>  
+                        </div>  
+                      </div>   
+                      <div id="Enemy-Principal-Skills">
+                          <div id="Enemy-Skill-0">   
+                              <div id="Enemy-Skill-All-Info">
+                                <span id="Enemy-SkillTitleAll"><strong id="Enemy-SkillTitle0">None</strong></span>
+                              </div> 
+                              <div id="Enemy-Skill-Bar-S0"></div>   
+                              <span id="Enemy-Skill-0-Tooltip">
+                                  <strong><span id="Enemy-SkillTitle0S">None</span></strong>
+                                  <p>
+                                  <span id="DescriptionSkill0-Enemy">Nothing is here.</span>
+                              </span>                       
+                          </div>
+                          <!-- The Skill 0 is Void -->
+                          <div id="Enemy-Skill-1">   
+                              <div id="Enemy-Skill-All-Info">
+                                <span id="Enemy-SkillTitleAll"><strong id="Enemy-SkillTitle1">None</strong></span>
+                              </div> 
+                              <div id="Enemy-Skill-Bar-S1"></div>   
+                              <span id="Enemy-Skill-1-Tooltip">
+                                  <strong><span id="Enemy-SkillTitle1S">None</span></strong>
+                                  <p>
+                                  <span id="DescriptionSkill1-Enemy">Nothing is here.</span>
+                              </span>                       
+                          </div>
+                          <div id="Enemy-Skill-2">  
+                              <div id="Enemy-Skill-All-Info">
+                                <span id="Enemy-SkillTitleAll"><strong id="Enemy-SkillTitle2">None</strong></span>
+                              </div>
+                              <div id="Enemy-Skill-Bar-S2"></div> 
+                              <span id="Enemy-Skill-2-Tooltip">
+                                <strong><span id="Enemy-SkillTitle2S">None</span></strong>
+                                <p>
+                                <span id="DescriptionSkill2-Enemy">Nothing is here.</span>
+                              </span>   
+                          </div>
+                          <div id="Enemy-Skill-3">  
+                              <div id="Enemy-Skill-All-Info">
+                                <span id="Enemy-SkillTitleAll"><strong id="Enemy-SkillTitle3">None</strong></span>
+                              </div>
+                              <div id="Enemy-Skill-Bar-S3"></div>  
+                              <span id="Enemy-Skill-3-Tooltip">
+                                <strong><span id="Enemy-SkillTitle3S">None</span></strong>
+                                <p>
+                                <span id="DescriptionSkill3-Enemy">Nothing is here.</span>
+                              </span>          
+                          </div>
+                          <div id="Enemy-Skill-4">  
+                              <div id="Enemy-Skill-All-Info">
+                                <span id="Enemy-SkillTitleAll"><strong id="Enemy-SkillTitle4">None</strong></span>
+                              </div>
+                              <div id="Enemy-Skill-Bar-S4"></div> 
+                              <span id="Enemy-Skill-4-Tooltip">
+                                <strong><span id="Enemy-SkillTitle4S">None</span></strong>
+                                <p>
+                                <span id="DescriptionSkill4-Enemy">Nothing is here.</span>
+                              </span>  
+                          </div>
+                          <div id="Enemy-Skill-5">  
+                              <div id="Enemy-Skill-All-Info">
+                                <span id="Enemy-SkillTitleAll"><strong id="Enemy-SkillTitle5">None</strong></span>
+                              </div>
+                              <div id="Enemy-Skill-Bar-S5"></div> 
+                              <span id="Enemy-Skill-5-Tooltip">
+                                <strong><span id="Enemy-SkillTitle5S">None</span></strong>
+                                <p>
+                                <span id="DescriptionSkill5-Enemy">Nothing is here.</span>
+                              </span>  
+                          </div>
+                          <div id="Enemy-Skill-6">  
+                              <div id="Enemy-Skill-All-Info">
+                                <span id="Enemy-SkillTitleAll"><strong id="Enemy-SkillTitle6">None</strong></span>
+                              </div>
+                              <div id="Enemy-Skill-Bar-S6"></div> 
+                              <span id="Enemy-Skill-6-Tooltip">
+                                <strong><span id="Enemy-SkillTitle6S">None</span></strong>
+                                <p>
+                                <span id="DescriptionSkill6-Enemy">Nothing is here.</span>
+                              </span>  
+                          </div>
+                          <div id="Enemy-Skill-7">  
+                              <div id="Enemy-Skill-All-Info">
+                                <span id="Enemy-SkillTitleAll"><strong id="Enemy-SkillTitle7">None</strong></span>
+                              </div>
+                              <div id="Enemy-Skill-Bar-S7"></div> 
+                              <span id="Enemy-Skill-7-Tooltip">
+                                <strong><span id="Enemy-SkillTitle7S">None</span></strong>
+                                <p>
+                                <span id="DescriptionSkill7-Enemy">Nothing is here.</span>
+                              </span>  
+                          </div>
+                          <div id="Enemy-Skill-8">  
+                              <div id="Enemy-Skill-All-Info">
+                                <span id="Enemy-SkillTitleAll"><strong id="Enemy-SkillTitle8">None</strong></span>
+                              </div>
+                              <div id="Enemy-Skill-Bar-S8"></div> 
+                              <span id="Enemy-Skill-8-Tooltip">
+                                <strong><span id="Enemy-SkillTitle8S">None</span></strong>
+                                <p>
+                                <span id="DescriptionSkill8-Enemy">Nothing is here.</span>
+                              </span>  
+                          </div>
+                          <div id="Enemy-Skill-9">  
+                              <div id="Enemy-Skill-All-Info">
+                                <span id="Enemy-SkillTitleAll"><strong id="Enemy-SkillTitle9">None</strong></span>
+                              </div>
+                              <div id="Enemy-Skill-Bar-S9"></div> 
+                              <span id="Enemy-Skill-9-Tooltip">
+                                <strong><span id="Enemy-SkillTitle9S">None</span></strong>
+                                <p>
+                                <span id="DescriptionSkill9-Enemy">Nothing is here.</span>
+                              </span>  
+                          </div>
+                          <div id="Enemy-Skill-10">  
+                              <div id="Enemy-Skill-All-Info">
+                                <span id="Enemy-SkillTitleAll"><strong id="Enemy-SkillTitle10">None</strong></span>
+                              </div>
+                              <div id="Enemy-Skill-Bar-S10"></div> 
+                              <span id="Enemy-Skill-10-Tooltip">
+                                <strong><span id="Enemy-SkillTitle10S">None</span></strong>
+                                <p>
+                                <span id="DescriptionSkill10-Enemy">Nothing is here.</span>
+                              </span>  
+                          </div>
+                          <div id="Enemy-Skill-11">  
+                              <div id="Enemy-Skill-All-Info">
+                                <span id="Enemy-SkillTitleAll"><strong id="Enemy-SkillTitle11">None</strong></span>
+                              </div>
+                              <div id="Enemy-Skill-Bar-S11"></div> 
+                              <span id="Enemy-Skill-11-Tooltip">
+                                <strong><span id="Enemy-SkillTitle11S">None</span></strong>
+                                <p>
+                                <span id="DescriptionSkill11-Enemy">Nothing is here.</span>
+                              </span>  
+                          </div>
+                          <div id="Enemy-Skill-12">  
+                              <div id="Enemy-Skill-All-Info">
+                                <span id="Enemy-SkillTitleAll"><strong id="Enemy-SkillTitle12">None</strong></span>
+                              </div>
+                              <div id="Enemy-Skill-Bar-S12"></div> 
+                              <span id="Enemy-Skill-12-Tooltip">
+                                <strong><span id="Enemy-SkillTitle12S">None</span></strong>
+                                <p>
+                                <span id="DescriptionSkill12-Enemy">Nothing is here.</span>
+                              </span>  
+                          </div>
+                      </div>
+                   </div>
+                   <div id="PlayerBattle-Border">
+                       <div id="Player-Principal-Info">
+                           <div id="Allies-Info-Title">
+                                  <span id="Allies-Title">None</span>  
+                                  <span id="AlliesTitle-Tooltip">
+                                    <strong><span id="AlliesNameTitle">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionAllies">Nothing is here.</span>
+                                  </span>
+                            </div>
+                            <div id="Player-Info-NumbersofAllies">
+                                <span id="Allies-Numbers"><span id="x-NumberofAllies">0</span>x</span>   
+                                <span id="AlliesNumbers-Tooltip">
+                                  <span id="DescriptionNumbersAllies">There is <strong id="NumberAllies">0</strong> Allies</span>
+                                </span>
+                            </div> 
+                            <div id="Allies-Info-Type">
+                                <span id="Allies-Type">N</span>   
+                                <span id="AlliesType-Tooltip">
+                                  <span id="DescriptionTypeAllies">Type: <strong id="TypeAlliesName">None</strong></span>
+                                </span>  
+                           </div>
+                       </div>
+                       <div id="Player-Principal-Skills">
+                            <div id="Player-Skill-0">   
+                                <div id="Player-Skill-All-Info">
+                                  <span id="Player-SkillTitleAll"><strong id="Player-SkillTitle0">None</strong></span>
+                                </div> 
+                                <div id="Player-Skill-Bar-S0"></div>   
+                                <span id="Player-Skill-0-Tooltip">
+                                    <strong><span id="Player-SkillTitle0S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill0-Player">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <!-- The Skill 0 is Void -->
+                            <div id="Player-Skill-1">   
+                                <div id="Player-Skill-All-Info">
+                                  <span id="Player-SkillTitleAll"><strong id="Player-SkillTitle1">None</strong></span>
+                                </div> 
+                                <div id="Player-Skill-Bar-S1"></div>   
+                                <span id="Player-Skill-1-Tooltip">
+                                    <strong><span id="Player-SkillTitle1S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill1-Player">Nothing is here.</span>
+
+                                </span>                       
+                            </div>
+                            <div id="Player-Skill-2">   
+                                <div id="Player-Skill-All-Info">
+                                  <span id="Player-SkillTitleAll"><strong id="Player-SkillTitle2">None</strong></span>
+                                </div> 
+                                <div id="Player-Skill-Bar-S2"></div>   
+                                <span id="Player-Skill-2-Tooltip">
+                                    <strong><span id="Player-SkillTitle2S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill2-Player">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <div id="Player-Skill-3">   
+                                <div id="Player-Skill-All-Info">
+                                  <span id="Player-SkillTitleAll"><strong id="Player-SkillTitle3">None</strong></span>
+                                </div> 
+                                <div id="Player-Skill-Bar-S3"></div>   
+                                <span id="Player-Skill-3-Tooltip">
+                                    <strong><span id="Player-SkillTitle3S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill3-Player">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <div id="Player-Skill-4">   
+                                <div id="Player-Skill-All-Info">
+                                  <span id="Player-SkillTitleAll"><strong id="Player-SkillTitle4">None</strong></span>
+                                </div> 
+                                <div id="Player-Skill-Bar-S4"></div>   
+                                <span id="Player-Skill-4-Tooltip">
+                                    <strong><span id="Player-SkillTitle4S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill4-Player">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <div id="Player-Skill-5">   
+                                <div id="Player-Skill-All-Info">
+                                  <span id="Player-SkillTitleAll"><strong id="Player-SkillTitle5">None</strong></span>
+                                </div> 
+                                <div id="Player-Skill-Bar-S5"></div>   
+                                <span id="Player-Skill-5-Tooltip">
+                                    <strong><span id="Player-SkillTitle5S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill5-Player">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <div id="Player-Skill-6">   
+                                <div id="Player-Skill-All-Info">
+                                  <span id="Player-SkillTitleAll"><strong id="Player-SkillTitle6">None</strong></span>
+                                </div> 
+                                <div id="Player-Skill-Bar-S6"></div>   
+                                <span id="Player-Skill-6-Tooltip">
+                                    <strong><span id="Player-SkillTitle6S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill6-Player">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <div id="Player-Skill-7">   
+                                <div id="Player-Skill-All-Info">
+                                  <span id="Player-SkillTitleAll"><strong id="Player-SkillTitle7">None</strong></span>
+                                </div> 
+                                <div id="Player-Skill-Bar-S7"></div>   
+                                <span id="Player-Skill-7-Tooltip">
+                                    <strong><span id="Player-SkillTitle7S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill7-Player">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <div id="Player-Skill-8">   
+                                <div id="Player-Skill-All-Info">
+                                  <span id="Player-SkillTitleAll"><strong id="Player-SkillTitle8">None</strong></span>
+                                </div> 
+                                <div id="Player-Skill-Bar-S8"></div>   
+                                <span id="Player-Skill-8-Tooltip">
+                                    <strong><span id="Player-SkillTitle8S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill8-Player">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <div id="Player-Skill-9">   
+                                <div id="Player-Skill-All-Info">
+                                  <span id="Player-SkillTitleAll"><strong id="Player-SkillTitle9">None</strong></span>
+                                </div> 
+                                <div id="Player-Skill-Bar-S9"></div>   
+                                <span id="Player-Skill-9-Tooltip">
+                                    <strong><span id="Player-SkillTitle9S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill9-Player">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <div id="Player-Skill-10">   
+                                <div id="Player-Skill-All-Info">
+                                  <span id="Player-SkillTitleAll"><strong id="Player-SkillTitle10">None</strong></span>
+                                </div> 
+                                <div id="Player-Skill-Bar-S10"></div>   
+                                <span id="Player-Skill-10-Tooltip">
+                                    <strong><span id="Player-SkillTitle10S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill10-Player">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <div id="Player-Skill-11">   
+                                <div id="Player-Skill-All-Info">
+                                  <span id="Player-SkillTitleAll"><strong id="Player-SkillTitle11">None</strong></span>
+                                </div> 
+                                <div id="Player-Skill-Bar-S11"></div>   
+                                <span id="Player-Skill-11-Tooltip">
+                                    <strong><span id="Player-SkillTitle11S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill11-Player">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <div id="Player-Skill-12">   
+                                <div id="Player-Skill-All-Info">
+                                  <span id="Player-SkillTitleAll"><strong id="Player-SkillTitle12">None</strong></span>
+                                </div> 
+                                <div id="Player-Skill-Bar-S12"></div>   
+                                <span id="Player-Skill-12-Tooltip">
+                                    <strong><span id="Player-SkillTitle12S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill12-Player">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                       </div>
+                       <div id="Allies-Principal-Skills">
+                            <div id="Allies-Skill-0">   
+                                <div id="Allies-Skill-All-Info">
+                                  <span id="Allies-SkillTitleAll"><strong id="Allies-SkillTitle0">None</strong></span>
+                                </div> 
+                                <div id="Allies-Skill-Bar-S0"></div>   
+                                <span id="Allies-Skill-0-Tooltip">
+                                    <strong><span id="Allies-SkillTitle0S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill0-Allies">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <!-- The Skill 0 is Void -->
+                            <div id="Allies-Skill-1">   
+                                <div id="Allies-Skill-All-Info">
+                                  <span id="Allies-SkillTitleAll"><strong id="Allies-SkillTitle1">None</strong></span>
+                                </div> 
+                                <div id="Allies-Skill-Bar-S1"></div>   
+                                <span id="Allies-Skill-1-Tooltip">
+                                    <strong><span id="Allies-SkillTitle1S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill1-Allies">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <div id="Allies-Skill-2">   
+                                <div id="Allies-Skill-All-Info">
+                                  <span id="Allies-SkillTitleAll"><strong id="Allies-SkillTitle2">None</strong></span>
+                                </div> 
+                                <div id="Allies-Skill-Bar-S2"></div>   
+                                <span id="Allies-Skill-2-Tooltip">
+                                    <strong><span id="Allies-SkillTitle2S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill2-Allies">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <div id="Allies-Skill-3">   
+                                <div id="Allies-Skill-All-Info">
+                                  <span id="Allies-SkillTitleAll"><strong id="Allies-SkillTitle3">None</strong></span>
+                                </div> 
+                                <div id="Allies-Skill-Bar-S3"></div>   
+                                <span id="Allies-Skill-3-Tooltip">
+                                    <strong><span id="Allies-SkillTitle3S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill3-Allies">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <div id="Allies-Skill-4">   
+                                <div id="Allies-Skill-All-Info">
+                                  <span id="Allies-SkillTitleAll"><strong id="Allies-SkillTitle4">None</strong></span>
+                                </div> 
+                                <div id="Allies-Skill-Bar-S4"></div>   
+                                <span id="Allies-Skill-4-Tooltip">
+                                    <strong><span id="Allies-SkillTitle4S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill4-Allies">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <div id="Allies-Skill-5">   
+                                <div id="Allies-Skill-All-Info">
+                                  <span id="Allies-SkillTitleAll"><strong id="Allies-SkillTitle5">None</strong></span>
+                                </div> 
+                                <div id="Allies-Skill-Bar-S5"></div>   
+                                <span id="Allies-Skill-5-Tooltip">
+                                    <strong><span id="Allies-SkillTitle5S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill5-Allies">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <div id="Allies-Skill-6">   
+                                <div id="Allies-Skill-All-Info">
+                                  <span id="Allies-SkillTitleAll"><strong id="Allies-SkillTitle6">None</strong></span>
+                                </div> 
+                                <div id="Allies-Skill-Bar-S6"></div>   
+                                <span id="Allies-Skill-6-Tooltip">
+                                    <strong><span id="Allies-SkillTitle6S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill6-Allies">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <div id="Allies-Skill-7">   
+                                <div id="Allies-Skill-All-Info">
+                                  <span id="Allies-SkillTitleAll"><strong id="Allies-SkillTitle7">None</strong></span>
+                                </div> 
+                                <div id="Allies-Skill-Bar-S7"></div>   
+                                <span id="Allies-Skill-7-Tooltip">
+                                    <strong><span id="Allies-SkillTitle7S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill7-Allies">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <div id="Allies-Skill-8">   
+                                <div id="Allies-Skill-All-Info">
+                                  <span id="Allies-SkillTitleAll"><strong id="Allies-SkillTitle8">None</strong></span>
+                                </div> 
+                                <div id="Allies-Skill-Bar-S8"></div>   
+                                <span id="Allies-Skill-8-Tooltip">
+                                    <strong><span id="Allies-SkillTitle8S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill8-Allies">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <div id="Allies-Skill-9">   
+                                <div id="Allies-Skill-All-Info">
+                                  <span id="Allies-SkillTitleAll"><strong id="Allies-SkillTitle9">None</strong></span>
+                                </div> 
+                                <div id="Allies-Skill-Bar-S9"></div>   
+                                <span id="Allies-Skill-9-Tooltip">
+                                    <strong><span id="Allies-SkillTitle9S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill9-Allies">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <div id="Allies-Skill-10">   
+                                <div id="Allies-Skill-All-Info">
+                                  <span id="Allies-SkillTitleAll"><strong id="Allies-SkillTitle10">None</strong></span>
+                                </div> 
+                                <div id="Allies-Skill-Bar-S10"></div>   
+                                <span id="Allies-Skill-10-Tooltip">
+                                    <strong><span id="Allies-SkillTitle1S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill10-Allies">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <div id="Allies-Skill-11">   
+                                <div id="Allies-Skill-All-Info">
+                                  <span id="Allies-SkillTitleAll"><strong id="Allies-SkillTitle11">None</strong></span>
+                                </div> 
+                                <div id="Allies-Skill-Bar-S11"></div>   
+                                <span id="Allies-Skill-11-Tooltip">
+                                    <strong><span id="Allies-SkillTitle11S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill11-Allies">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                            <div id="Allies-Skill-12">   
+                                <div id="Allies-Skill-All-Info">
+                                  <span id="Allies-SkillTitleAll"><strong id="Allies-SkillTitle12">None</strong></span>
+                                </div> 
+                                <div id="Allies-Skill-Bar-S12"></div>   
+                                <span id="Allies-Skill-12-Tooltip">
+                                    <strong><span id="Allies-SkillTitle12S">None</span></strong>
+                                    <p>
+                                    <span id="DescriptionSkill12-Allies">Nothing is here.</span>
+                                </span>                       
+                            </div>
+                       </div>
+                   </div>
+                   <div id="Drops-Border">
+                       <div id="Drops-Principal-Info">
+                            <span id="Drops-Title-Initial">Drops</span> 
+                            <span id="Drops-Initial-Tooltip">
+                               <strong id="Drops-Tooltip-Title">Drops</strong>
+                               <p>
+                               <span id="Drops-Tooltip-Description">
+                                   The drops fall, the waste falls, the dead fall, the 
+                                   tools fall, everything falls, collecting every object, 
+                                   every possession, in this dark time, wasting is a crime...
+                               </span> 
+                            </span>
+                       </div>
+                       <div id="Drops-Principal-Index">
+                             <div id="Drops-Index-Slot-1">
+                                 <div id="Slot-1-Drops-Info">
+                                     <span id="Slot-1-Title">None</span>
+                                     <span id="Slot-1-Tooltip">
+                                          <strong id="Slot-1-Toltip-Title">None</strong>
+                                          <p>
+                                          <span id="Slot-1-Description">
+                                            Nothing is here.
+                                          </span>
+                                     </span>
+                                 </div>
+                                 <div id="Slots-1-Drops-Quantity">
+                                    <span id="Slot-1-QuantityItem">0</span>
+                                    <span id="Slot-1-Tooltip-Quantity">
+                                        <strong id="Slots-Toltip-Title-Quantity">Quantity:</strong>
+                                        <span id="Slot-1-Info-Quantity">0</span>
+                                        <br>
+                                        <strong id="Slots-Toltip-Title-Droprate">Drop Rate:</strong>
+                                        <span id="Slot-1-Info-DropRate"><span id="Slot-1-Percentage">0</span>%</span>
+                                    </span>
+                                 </div>
+                             </div>
+                             <div id="Drops-Index-Slot-2">
+                                 <div id="Slot-2-Drops-Info">
+                                     <span id="Slot-2-Title">None</span>
+                                     <span id="Slot-2-Tooltip">
+                                          <strong id="Slot-2-Toltip-Title">None</strong>
+                                          <p>
+                                          <span id="Slot-2-Description">
+                                            Nothing is here.
+                                          </span>
+                                     </span>
+                                 </div>
+                                 <div id="Slots-2-Drops-Quantity">
+                                    <span id="Slot-2-QuantityItem">0</span>
+                                    <span id="Slot-2-Tooltip-Quantity">
+                                        <strong id="Slots-Toltip-Title-Quantity">Quantity:</strong>
+                                        <span id="Slot-2-Info-Quantity">0</span>
+                                        <br>
+                                        <strong id="Slots-Toltip-Title-Droprate">Drop Rate:</strong>
+                                        <span id="Slot-2-Info-DropRate"><span id="Slot-2-Percentage">0</span>%</span>
+                                    </span>
+                                 </div>
+                             </div>
+                             <div id="Drops-Index-Slot-3">
+                                 <div id="Slot-3-Drops-Info">
+                                     <span id="Slot-3-Title">None</span>
+                                     <span id="Slot-3-Tooltip">
+                                          <strong id="Slot-3-Toltip-Title">None</strong>
+                                          <p>
+                                          <span id="Slot-3-Description">
+                                            Nothing is here.
+                                          </span>
+                                     </span>
+                                 </div>
+                                 <div id="Slots-3-Drops-Quantity">
+                                    <span id="Slot-3-QuantityItem">0</span>
+                                    <span id="Slot-3-Tooltip-Quantity">
+                                        <strong id="Slots-Toltip-Title-Quantity">Quantity:</strong>
+                                        <span id="Slot-3-Info-Quantity">0</span>
+                                        <br>
+                                        <strong id="Slots-Toltip-Title-Droprate">Drop Rate:</strong>
+                                        <span id="Slot-3-Info-DropRate"><span id="Slot-3-Percentage">0</span>%</span>
+                                    </span>
+                                 </div>
+                             </div>
+                             <div id="Drops-Index-Slot-4">
+                                 <div id="Slot-4-Drops-Info">
+                                     <span id="Slot-4-Title">None</span>
+                                     <span id="Slot-4-Tooltip">
+                                          <strong id="Slot-4-Toltip-Title">None</strong>
+                                          <p>
+                                          <span id="Slot-4-Description">
+                                            Nothing is here.
+                                          </span>
+                                     </span>
+                                 </div>
+                                 <div id="Slots-4-Drops-Quantity">
+                                    <span id="Slot-4-QuantityItem">0</span>
+                                    <span id="Slot-4-Tooltip-Quantity">
+                                        <strong id="Slots-Toltip-Title-Quantity">Quantity:</strong>
+                                        <span id="Slot-4-Info-Quantity">0</span>
+                                        <br>
+                                        <strong id="Slots-Toltip-Title-Droprate">Drop Rate:</strong>
+                                        <span id="Slot-4-Info-DropRate"><span id="Slot-4-Percentage">0</span>%</span>
+                                    </span>
+                                 </div>
+                             </div>
+                             <div id="Drops-Index-Slot-5">
+                                 <div id="Slot-5-Drops-Info">
+                                     <span id="Slot-5-Title">None</span>
+                                     <span id="Slot-5-Tooltip">
+                                          <strong id="Slot-5-Toltip-Title">None</strong>
+                                          <p>
+                                          <span id="Slot-5-Description">
+                                            Nothing is here.
+                                          </span>
+                                     </span>
+                                 </div>
+                                 <div id="Slots-5-Drops-Quantity">
+                                    <span id="Slot-5-QuantityItem">0</span>
+                                    <span id="Slot-5-Tooltip-Quantity">
+                                        <strong id="Slots-Toltip-Title-Quantity">Quantity:</strong>
+                                        <span id="Slot-5-Info-Quantity">0</span>
+                                        <br>
+                                        <strong id="Slots-Toltip-Title-Droprate">Drop Rate:</strong>
+                                        <span id="Slot-5-Info-DropRate"><span id="Slot-5-Percentage">0</span>%</span>
+                                    </span>
+                                 </div>
+                             </div>
+                             <div id="Drops-Index-Slot-6">
+                                 <div id="Slot-6-Drops-Info">
+                                     <span id="Slot-6-Title">None</span>
+                                     <span id="Slot-6-Tooltip">
+                                          <strong id="Slot-6-Toltip-Title">None</strong>
+                                          <p>
+                                          <span id="Slot-6-Description">
+                                            Nothing is here.
+                                          </span>
+                                     </span>
+                                 </div>
+                                 <div id="Slots-6-Drops-Quantity">
+                                    <span id="Slot-6-QuantityItem">0</span>
+                                    <span id="Slot-6-Tooltip-Quantity">
+                                        <strong id="Slots-Toltip-Title-Quantity">Quantity:</strong>
+                                        <span id="Slot-6-Info-Quantity">0</span>
+                                        <br>
+                                        <strong id="Slots-Toltip-Title-Droprate">Drop Rate:</strong>
+                                        <span id="Slot-6-Info-DropRate"><span id="Slot-6-Percentage">0</span>%</span>
+                                    </span>
+                                 </div>
+                             </div>
+                             <div id="Drops-Index-Slot-7">
+                                 <div id="Slot-7-Drops-Info">
+                                     <span id="Slot-7-Title">None</span>
+                                     <span id="Slot-7-Tooltip">
+                                          <strong id="Slot-7-Toltip-Title">None</strong>
+                                          <p>
+                                          <span id="Slot-7-Description">
+                                            Nothing is here.
+                                          </span>
+                                     </span>
+                                 </div>
+                                 <div id="Slots-7-Drops-Quantity">
+                                    <span id="Slot-7-QuantityItem">0</span>
+                                    <span id="Slot-7-Tooltip-Quantity">
+                                        <strong id="Slots-Toltip-Title-Quantity">Quantity:</strong>
+                                        <span id="Slot-7-Info-Quantity">0</span>
+                                        <br>
+                                        <strong id="Slots-Toltip-Title-Droprate">Drop Rate:</strong>
+                                        <span id="Slot-7-Info-DropRate"><span id="Slot-7-Percentage">0</span>%</span>
+                                    </span>
+                                 </div>
+                             </div>
+                             <div id="Drops-Index-Slot-8">
+                                 <div id="Slot-8-Drops-Info">
+                                     <span id="Slot-8-Title">None</span>
+                                     <span id="Slot-8-Tooltip">
+                                          <strong id="Slot-8-Toltip-Title">None</strong>
+                                          <p>
+                                          <span id="Slot-8-Description">
+                                            Nothing is here.
+                                          </span>
+                                     </span>
+                                 </div>
+                                 <div id="Slots-8-Drops-Quantity">
+                                    <span id="Slot-8-QuantityItem">0</span>
+                                    <span id="Slot-8-Tooltip-Quantity">
+                                        <strong id="Slots-Toltip-Title-Quantity">Quantity:</strong>
+                                        <span id="Slot-8-Info-Quantity">0</span>
+                                        <br>
+                                        <strong id="Slots-Toltip-Title-Droprate">Drop Rate:</strong>
+                                        <span id="Slot-8-Info-DropRate"><span id="Slot-8-Percentage">0</span>%</span>
+                                    </span>
+                                 </div>
+                             </div>
+                             <div id="Drops-Index-Slot-9">
+                                 <div id="Slot-9-Drops-Info">
+                                     <span id="Slot-9-Title">None</span>
+                                     <span id="Slot-9-Tooltip">
+                                          <strong id="Slot-9-Toltip-Title">None</strong>
+                                          <p>
+                                          <span id="Slot-9-Description">
+                                            Nothing is here.
+                                          </span>
+                                     </span>
+                                 </div>
+                                 <div id="Slots-9-Drops-Quantity">
+                                    <span id="Slot-9-QuantityItem">0</span>
+                                    <span id="Slot-9-Tooltip-Quantity">
+                                        <strong id="Slots-Toltip-Title-Quantity">Quantity:</strong>
+                                        <span id="Slot-9-Info-Quantity">0</span>
+                                        <br>
+                                        <strong id="Slots-Toltip-Title-Droprate">Drop Rate:</strong>
+                                        <span id="Slot-9-Info-DropRate"><span id="Slot-9-Percentage">0</span>%</span>
+                                    </span>
+                                 </div>
+                             </div>
+                             <div id="Drops-Index-Slot-10">
+                                 <div id="Slot-10-Drops-Info">
+                                     <span id="Slot-10-Title">None</span>
+                                     <span id="Slot-10-Tooltip">
+                                          <strong id="Slot-10-Toltip-Title">None</strong>
+                                          <p>
+                                          <span id="Slot-10-Description">
+                                            Nothing is here.
+                                          </span>
+                                     </span>
+                                 </div>
+                                 <div id="Slots-10-Drops-Quantity">
+                                    <span id="Slot-10-QuantityItem">0</span>
+                                    <span id="Slot-10-Tooltip-Quantity">
+                                        <strong id="Slots-Toltip-Title-Quantity">Quantity:</strong>
+                                        <span id="Slot-10-Info-Quantity">0</span>
+                                        <br>
+                                        <strong id="Slots-Toltip-Title-Droprate">Drop Rate:</strong>
+                                        <span id="Slot-10-Info-DropRate"><span id="Slot-10-Percentage">0</span>%</span>
+                                    </span>
+                                 </div>
+                             </div>
+                             <div id="Drops-Index-Slot-11">
+                                 <div id="Slot-11-Drops-Info">
+                                     <span id="Slot-11-Title">None</span>
+                                     <span id="Slot-11-Tooltip">
+                                          <strong id="Slot-11-Toltip-Title">None</strong>
+                                          <p>
+                                          <span id="Slot-11-Description">
+                                            Nothing is here.
+                                          </span>
+                                     </span>
+                                 </div>
+                                 <div id="Slots-11-Drops-Quantity">
+                                    <span id="Slot-11-QuantityItem">0</span>
+                                    <span id="Slot-11-Tooltip-Quantity">
+                                        <strong id="Slots-Toltip-Title-Quantity">Quantity:</strong>
+                                        <span id="Slot-11-Info-Quantity">0</span>
+                                        <br>
+                                        <strong id="Slots-Toltip-Title-Droprate">Drop Rate:</strong>
+                                        <span id="Slot-11-Info-DropRate"><span id="Slot-11-Percentage">0</span>%</span>
+                                    </span>
+                                 </div>
+                             </div>
+                             <div id="Drops-Index-Slot-12">
+                                 <div id="Slot-12-Drops-Info">
+                                     <span id="Slot-12-Title">None</span>
+                                     <span id="Slot-12-Tooltip">
+                                          <strong id="Slot-12-Toltip-Title">None</strong>
+                                          <p>
+                                          <span id="Slot-12-Description">
+                                            Nothing is here.
+                                          </span>
+                                     </span>
+                                 </div>
+                                 <div id="Slots-12-Drops-Quantity">
+                                    <span id="Slot-12-QuantityItem">0</span>
+                                    <span id="Slot-12-Tooltip-Quantity">
+                                        <strong id="Slots-Toltip-Title-Quantity">Quantity:</strong>
+                                        <span id="Slot-12-Info-Quantity">0</span>
+                                        <br>
+                                        <strong id="Slots-Toltip-Title-Droprate">Drop Rate:</strong>
+                                        <span id="Slot-12-Info-DropRate"><span id="Slot-12-Percentage">0</span>%</span>
+                                    </span>
+                                 </div>
+                             </div>
+                       </div>                    
+                   </div>
+                </div>
+            </div>
+        </div>
+      </div> 
+       <script type="text/javascript" src="main.js"></script> 
+   </body>  
+</html>
+
+
+
+<!-- <div id="Log-Border">
+          <span id="Log-Options">
+           <strong id="Log-Title">Log</strong>
+           <em id="LogTab1">-</em>
+           <em id="LogTab2">Records</em>
+            <span id="LogTab2-ToolTip">
+              <strong>Records:</strong>
+              <br>Notes and Records of your desperate life.
+            </span>  
+          </span>
+          <span id="Message-Table"> 
+          </span>
+     </div>  
+                     <span id="Currency-TBSC">
+                        <span id="Currency-SpaceName1">Pocket Coin Bag</span>+<span id="Currency-SpaceSuP">50</span>
+                      </span>
+
+
+                  <div id="Stick-Action">
+                   <button id="Stick"onclick="actionStick(1)">Stick</button>   
+                   <span id="Stick-ToolTip">
+                     <strong id="TitleSti">Get a Stick!</strong>
+                     <span id="StickInf"></span>
+                     <span id="StickDuTotal">
+                       <span id="StickDuT">Durability:</span>
+                       <span id="StickDu"></span>
+                     </span>
+                     <br>
+                     <span id="StickPHLo">
+                       <span id="StickPHT">PH:</span>
+                       <span id="StickPH"></span>
+                     </span>
+                     <p>
+                     <span id="DescriptionSti">
+                       A primordial instinct to pick up a stick from the ground.
+                     </span>
+                     <br>
+                     <span id="StickGet">
+                       <span id="StickGetT">Stick:</span>
+                       <span id="StickNumbGet">1</span>
+                     </span>
+                   </span>  
+                 </div>
+                 <div id="Swing-Action">
+                   <button id="Swing" onclick="actionSwing(1)">Swing</button>
+                   <span id="Swing-ToolTip">
+                     <strong id="TitleSwi">Swing the Stick!</strong>
+                     <br>
+                     <span id="SwingPHLo">
+                      <span id="SwingPHT">PH:</span>
+                      <span id="SwingPH">-0.01</span>
+                      <br> 
+                     </span>
+                     <br>              
+                     <span id="SwingInf"></span>
+                     <span id="DescriptionSwi">
+                       A little desire, to become stronger.
+                     </span>
+                     <br>
+                     <span id="TSlotSW">
+                       <span id="TSWD">Days:</span>
+                       <span id="DSw">0.1</span>
+                     </span>
+                     <br>
+                     <span id="SwSExp">
+                       <span id="TSwE">Exp:</span>
+                       <span id="ExpS">1</span>
+                     </span>
+                     <br>
+                     <span id="GCSExp">
+                       <span id="GCsE">Exp:</span>
+                       <span id="ExpGCS">0.1</span>
+                     </span>
+                     <br>
+                     <span id="BcSExp">
+                       <span id="BCsE">Exp:</span>
+                       <span id="ExpBcS">1</span>
+                     </span>
+                     <br>
+                   </span> 
+                 </div>
+                 <div id="Beg-Action">
+                   <button id="Beg" onclick="actionBeg(1)">Beg</button>
+                   <span id="Beg-ToolTip">
+                    <strong id="TitleBeg">Like a Professional!</strong>
+                    <span id="BegInf"></span>
+                     <br>
+                     <span id="BegPHLo">
+                       <span id="BegPHT">PH:</span>
+                       <span id="BegPH"></span>
+                     </span>
+                     <br>
+                     <span id="DescriptionBeg">
+                       Like a fish entering water, or a worm entering land...
+                     </span>
+                     <br>
+                     <span id="BegCurrM">
+                       <span id="BegCMT">Copper Coins:</span>
+                       <span id="BegCm"></span>
+                     </span>
+                     <br>
+                     <span id="BegPersXp">
+                       <span id="BegPerT">Exp:</span>
+                       <span id="BegPTM">1</span>
+                    </span>
+                  </span>  
+                 </div>
+                 <div id="Eat-Action">
+                   <button id="Eat" onclick="actionEat(1)">Eat</button>
+                   <span id="Eat-ToolTip">
+                     <strong id="TitleEat">Licking your Fingers!</strong>
+                     <span id="EatInf"></span>
+                     <p>
+                     <span id="DescriptionEat">
+                       Your stomach is satisfied, but your taste buds hate you.
+                     </span>
+                     <br>
+                     <span id="EatFoodQ">
+                       <span id="EatFoodT">Food:</span>
+                       <span id="EatFoodN">-1</span>
+                     </span>
+                     <br>
+                     <span id="EatTypeQPhP">
+                       <span id="EatTypeTPhP">PH:</span>
+                       <span id="EatTypeNPhP">0.2</span>
+                     </span>
+                   </span>  
+                 </div>
+                 <span id="Tier0-Zones">
+                    <span id="ZoneForest">Forest</span>
+                    <span id="ZoneCityGates">City Gates</span>
+                 </span> -->
